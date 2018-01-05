@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <title>Dice</title>
+</head>
+<body>
+
+<div class="game-board">
+
+  <div class="wrapper">
+
+    <div class="player1 player">
+      <h3>Player 1</h3>
+      <h2>Score</h2>
+      <h1>0</h1>
+    </div>
+    <div class="game">
+      <img src="img/6.png" alt="">
+      <div id="cont">
+        <div class="round">--</div>
+        <h5>x3<span id="txt">Bonus</span></h5>
+      </div>
+      <p>Take points</p>
+      <div class="round-history"></div>
+    </div>
+    <div class="player2 player">
+      <h3>Player 2</h3>
+      <h2>Score</h2>
+      <h1>0</h1>
+    </div>
+
+  </div>
+</div>
+<div class="background"></div>
+<div class="form js-startForm">
+  <h3>Lets play the dice game</h3>
+  <form>
+    <div class="wrapper-1-2">
+      <label for="name1">Player 1 name</label>
+      <label for="name2">Player 2 name</label>
+      <label for="winscore">Score to win</label>
+    </div>
+    <div class="wrapper-1-2">
+      <input type="text" id="name1" placeholder="enter your name">
+      <input type="text" id="name2" placeholder="enter your name">
+      <input type="number" id="winscore" value="100" min="10" max="999" placeholder="score needed to win (10...999)">
+    </div>
+  </form>
+  <p class="btn" id="getting-started">Dice</p>
+</div>
+<div class="form js-winForm">
+  <i class="ion-ios-close form-icon"></i>
+  <h3 class="js-wintext">Congratulations palyer 1 wins the game</h3>
+  <p class="btn js-restart">Restart</p>
+  <p class="btn js-update">Update</p>
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+
+</html>

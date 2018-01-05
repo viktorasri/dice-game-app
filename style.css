@@ -1,0 +1,222 @@
+body {
+  font-family: 'Indie Flower', cursive;
+  text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s; }
+
+.game-board {
+  background-image: url("img/chalkboard.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh; }
+
+.game {
+  display: inline-block;
+  position: relative;
+  width: 400px; }
+  .game img {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 30px; }
+
+  .game .round {
+    margin: auto;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    width: 80px;
+    position: relative;
+    text-align: center; }
+  .game h5 {
+    position: absolute;
+    line-height: normal;
+    right: 24%;
+    top: 54%;
+    font-size: 50px;
+    color: #32cd32;
+    display: none;
+    line-height: 0.8;
+  }
+  .game #txt{
+    font-size: 16px;
+    color: #daa520;
+    right: 0px !important;
+    display: block;
+    width: 50px;
+  }
+  .game .round-history{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    user-select: none;
+    position: absolute;
+    bottom: -60px;
+    right: 50%;
+    transform: translateX(50%);
+    height: 30px;}
+
+  .game .round-history img{
+    height: 30px;
+    width: 30px;
+    margin: 4px 3px;
+    filter: blur(1px);
+  }
+.game .round-history img:last-of-type{
+  filter: none;
+  animation-name: dice-show;
+  animation-duration: 1s;
+  animation-fill-mode: forwards ;}
+    @keyframes  dice-show{from {transform: scale(0.2)} to{transform: scale(1.3)}
+}
+  .game p {
+    font-size: 20px;
+    line-height: 32px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    width: 120px;
+    margin: auto;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: 0.15s}
+    .game p:active{transform: scale(0.97);}
+
+.player {
+  display: inline-block;
+  vertical-align: top; }
+  .player h1 {
+    font-size: 100px;
+    width: 100px;
+    color: #ffffff; }
+  .player h2 {
+    color: #ffffff;
+    font-size: 20px; }
+  .player h3 {
+    color: #ffffff;
+    font-size: 30px;
+    border-radius: 5px;
+    line-height: 50px;
+    padding: 0 10px;
+    margin-bottom: 10px; }
+
+.active {
+  color: #ffa500 !important;
+  transform: scale(1.5);
+  transition: .9s; 
+}
+
+.background {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: block;
+}
+.form {
+  background-color: #f2f2f2;
+  padding: 30px;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 7px;
+  width: 45%;
+
+
+}
+.wrapper-1-2 {
+  display: inline-block;
+  width: 40%;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.wrapper-1-2:first-of-type {
+
+  width: 45%;
+
+}
+h3 {
+  color: #ffa500;
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.wrapper-1-2 input {
+  width: 100%;
+  vertical-align: top;
+  display: block;
+  height: 30px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  padding: 3px 5px;
+  border: 1px solid #555555;
+  box-sizing: border-box;
+font-weight: 300;
+  font-size: 15px;
+
+}
+
+label {
+  text-align: right;
+  color: #333333;
+  font-size: 25px;
+  display: block;
+
+}
+
+*focus {outline: none;}
+
+.btn {
+  font-size: 20px;
+  padding: 3px 20px;
+  color: #f2f2f2;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  width: 120px;
+  margin: auto;
+  margin-top: 25px;
+  font-family: inherit;
+  background-color: #444444;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: 0.15s;
+
+}
+.btn:active{
+  transform: scale(0.95);
+}
+
+.form-icon {
+  font-size: 30px;
+  color: #ffa500;
+  position: absolute;
+  top:3px;
+  right: 5px;
+  cursor: pointer;
+}
+.js-winForm {
+  display: none;
+}
