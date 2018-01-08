@@ -45,7 +45,7 @@ getPlayerNameBtn.addEventListener('click',function () {
 });
 
 dice.addEventListener('click',function () {
-    rand = Math.floor(Math.random()*5+2);
+    rand = Math.floor(Math.random()*6+1);
     diceH(rand);
     if (bonus<getBonus(rand)) {
         bonus=getBonus(rand);
@@ -66,12 +66,6 @@ dice.addEventListener('click',function () {
     }else roundData += rand;
     round.textContent=roundData;
 })
-
-function resetAllBonus() {
-    resetRowBonus();
-    bonus=1;
-    bonusShow.style.display= 'none';
-}
 
 take.addEventListener('click',function () {      //take round score
     if (roundData==0) return                        //prevent switching players then round score = 0
@@ -110,6 +104,11 @@ closeBtn.addEventListener('click',function () {
 });
 
 //----------functions---------------
+function resetAllBonus() {
+    resetRowBonus();
+    bonus=1;
+    bonusShow.style.display= 'none';
+}
 function rowBonus(n) {  //function lookup for 3 or 5 dice row (order not important) and return bonus multiplier
     switch(n){
         case 2:
